@@ -21,13 +21,6 @@ entries:
       show_more: true
       show_more_text: See more apps...
       show_more_url: example2-archive.html
-      
-  - title : Machine Learning Study
-   post_list:
-      limit: 3
-      show_more: true
-      show_more_text: See more posts...
-      show_more_url: example2-archive.html
   
   - title: another list
     entries:
