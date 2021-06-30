@@ -8,6 +8,13 @@ entries:
       - title: github repo
         url: https://github.com/jaeho0718
 
+  - title: MachineLearning Study
+    post_list:
+      limit: 3
+      show_more: true
+      show_more_text: See more posts...
+      show_more_url: archive.html
+      
   - title: all posts
     post_list:
       limit: 5
@@ -17,7 +24,7 @@ entries:
 
   - title: My Apps
     post_list:
-      limit: 4
+      limit: 2
       show_more: true
       show_more_text: See more apps...
       show_more_url: example2-archive.html
