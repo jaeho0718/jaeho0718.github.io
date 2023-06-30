@@ -10,7 +10,7 @@ version:          1.0
 gitbook_version:  3.2.3
 
 url:              'https://jaeho0718.github.io'
-baseurl:          '/codes'
+#baseurl:          '/codes'
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
@@ -63,4 +63,5 @@ regenerate:       true
 plugins:
   - jekyll-feed
   - jekyll-readme-index
+  - jekyll-include-cache
   - jemoji
