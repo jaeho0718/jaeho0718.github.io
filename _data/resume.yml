@@ -1,6 +1,6 @@
 name: "이재호"
 name_en: "Lee Jaeho"
-focus: "시스템 소프트웨어 / 양자컴퓨팅"
+focus: "System software / Quantum Computing"
 goal: "I aim to leverage my system programming skills in the development of quantum-classical hybrid computing architectures."
 about: "I am an undergraduate student in the Department of Software Engineering at Chung-Ang University, focusing on exploring the convergence of system software and quantum computing. I have worked on diverse projects using C++, Python, and Swift, and have hands-on experience in iOS application development. I enjoy sharing knowledge through seminars and mentoring, and I aim to apply my system programming expertise to the design and development of quantum–classical hybrid computing architectures."
 
@@ -21,10 +21,14 @@ education:
   gpa: "4.29 / 4.5"
 
 career:
+  - title: "Qsim+ Internship"
+    org: "Qsim+"
+    url: "https://www.qsimplus.com"
+    period: "2026.03 ~ Present"
   - title: "Undergraduate Researcher"
     org: "Computer System Lab."
     url: "https://www.cslab.cau.ac.kr/home"
-    period: "2025.01 ~ Present"
+    period: "2025.01 ~ 2026.02"
   - title: "KAIST-MIT Quantum Winter School"
     org: "KAIST"
     period: "2026.01"
