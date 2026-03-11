@@ -1,0 +1,8 @@
+<a href="{{ include.post.url | relative_url }}" class="card">
+  <div class="card-body">
+    <span class="card-category">{{ include.post.categories | first }}</span>
+    <h3 class="card-title">{{ include.post.title }}</h3>
+    <p class="card-excerpt">{{ include.post.excerpt | strip_html | truncate: 120 }}</p>
+    <time class="card-date">{{ include.post.date | date: "%Y-%m-%d" }}</time>
+  </div>
+</a>

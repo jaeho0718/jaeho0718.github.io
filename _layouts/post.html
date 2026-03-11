@@ -1,0 +1,69 @@
+---
+layout: default
+---
+<article class="post">
+  {% if page.image %}
+  <div class="post-hero">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+  </div>
+  {% endif %}
+  <div class="post-header">
+    <span class="post-category">{{ page.categories | first }}</span>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y년 %m월 %d일" }}</time>
+  </div>
+  <div class="post-layout">
+    <aside class="post-toc" id="post-toc">
+      <nav class="toc-nav">
+        <h4 class="toc-title">On this page</h4>
+        <ul class="toc-list" id="toc-list">
+          <!-- Populated by JavaScript -->
+        </ul>
+      </nav>
+    </aside>
+    <div class="post-body" id="post-body">
+      {{ content }}
+    </div>
+  </div>
+  <a href="{{ '/posts/' | relative_url }}" class="back-link">← Back to Posts</a>
+</article>
+
+<script>
+(function() {
+  var body = document.getElementById('post-body');
+  var tocList = document.getElementById('toc-list');
+  if (!body || !tocList) return;
+
+  var headings = body.querySelectorAll('h2, h3');
+  if (headings.length === 0) {
+    document.getElementById('post-toc').style.display = 'none';
+    return;
+  }
+
+  headings.forEach(function(h, i) {
+    if (!h.id) h.id = 'section-' + i;
+    var li = document.createElement('li');
+    li.className = 'toc-item' + (h.tagName === 'H3' ? ' toc-sub' : '');
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent;
+    a.className = 'toc-link';
+    li.appendChild(a);
+    tocList.appendChild(li);
+  });
+
+  // Active tracking on scroll
+  var links = tocList.querySelectorAll('.toc-link');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        links.forEach(function(l) { l.classList.remove('active'); });
+        var active = tocList.querySelector('a[href="#' + entry.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+  headings.forEach(function(h) { observer.observe(h); });
+})();
+</script>

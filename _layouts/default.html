@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ko' }}" data-theme="auto">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include nav.html %}
+  <main class="site-content">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script>
+  (function() {
+    var html = document.documentElement;
+    var toggle = document.querySelector('.theme-toggle');
+    var stored = localStorage.getItem('theme');
+    if (stored && stored !== 'auto') {
+      html.setAttribute('data-theme', stored);
+    }
+    if (toggle) {
+      toggle.addEventListener('click', function() {
+        var current = html.getAttribute('data-theme');
+        var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var next;
+        if (current === 'dark' || (current === 'auto' && systemDark)) {
+          next = 'light';
+        } else {
+          next = 'dark';
+        }
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+    }
+  })();
+  </script>
+</body>
+</html>

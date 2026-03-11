@@ -1,0 +1,117 @@
+---
+layout: default
+---
+<div class="resume">
+  <!-- Header -->
+  <div class="resume-header">
+    <h1 class="resume-name">{{ site.data.resume.name }}</h1>
+    <p class="resume-name-en">{{ site.data.resume.name_en }}</p>
+    <p class="resume-focus">{{ site.data.resume.focus }}</p>
+    <div class="resume-contacts">
+      {% for contact in site.data.resume.contacts %}
+      <a href="{{ contact.url }}" target="_blank" rel="noopener">{{ contact.type }}: {{ contact.value }}</a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- About Me -->
+  <section class="resume-section">
+    <h2>About Me</h2>
+    <p class="resume-about">{{ site.data.resume.about }}</p>
+    <p class="resume-goal"><strong>Goal:</strong> {{ site.data.resume.goal }}</p>
+  </section>
+
+  <!-- Education -->
+  <section class="resume-section">
+    <h2>Education</h2>
+    <div class="education-info">
+      <p><strong>{{ site.data.resume.education.university }}</strong></p>
+      <p>{{ site.data.resume.education.major }}</p>
+      <p>GPA: {{ site.data.resume.education.gpa }}</p>
+    </div>
+  </section>
+
+  <!-- Career -->
+  <section class="resume-section">
+    <h2>Career</h2>
+    <ul class="career-list">
+      {% for item in site.data.resume.career %}
+      <li class="career-item">
+        <div class="career-info">
+          <div class="career-title">{{ item.title }}</div>
+          <div class="career-org">
+            {% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.org }}</a>{% else %}{{ item.org }}{% endif %}
+          </div>
+        </div>
+        <div class="career-period">{{ item.period }}</div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <!-- Awards -->
+  <section class="resume-section">
+    <h2>Awards</h2>
+    <table class="awards-table">
+      <thead>
+        <tr>
+          <th>Award</th>
+          <th>Date</th>
+          <th>Organizer</th>
+          <th>Tier</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for award in site.data.resume.awards %}
+        <tr>
+          <td>{{ award.name }}</td>
+          <td>{{ award.date }}</td>
+          <td>{{ award.organizer }}</td>
+          <td>{{ award.tier }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Projects -->
+  <section class="resume-section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      {% for project in site.data.resume.projects %}
+      <div class="project-card">
+        <h3>{{ project.name }}</h3>
+        <span class="project-type">{{ project.type }}</span>
+        <span class="project-period">{{ project.period }}</span>
+        <p>{{ project.description }}</p>
+        <div class="tech-stack">
+          {% for tech in project.tech %}
+          <span class="tech-tag">{{ tech }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section class="resume-section">
+    <h2>Major Courses</h2>
+    <table class="courses-table awards-table">
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for course in site.data.resume.courses %}
+        <tr>
+          <td>{{ course.name }}</td>
+          <td>{{ course.grade }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+</div>

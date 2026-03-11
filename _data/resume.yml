@@ -1,0 +1,106 @@
+name: "이재호"
+name_en: "Lee Jaeho"
+focus: "시스템 소프트웨어 / 양자컴퓨팅"
+goal: "I aim to leverage my system programming skills in the development of quantum-classical hybrid computing architectures."
+about: "I am an undergraduate student in the Department of Software Engineering at Chung-Ang University, focusing on exploring the convergence of system software and quantum computing. I have worked on diverse projects using C++, Python, and Swift, and have hands-on experience in iOS application development. I enjoy sharing knowledge through seminars and mentoring, and I aim to apply my system programming expertise to the design and development of quantum–classical hybrid computing architectures."
+
+contacts:
+  - type: GitHub
+    value: jaeho0718
+    url: "https://github.com/jaeho0718"
+  - type: Email
+    value: jaeho010718@email.com
+    url: "mailto:jaeho010718@email.com"
+  - type: LinkedIn
+    value: LinkedIn
+    url: "http://www.linkedin.com/in/ljaeho"
+
+education:
+  university: "중앙대학교 (Chung-Ang University)"
+  major: "소프트웨어학부 (Software Engineering)"
+  gpa: "4.29 / 4.5"
+
+career:
+  - title: "Undergraduate Researcher"
+    org: "Computer System Lab."
+    url: "https://www.cslab.cau.ac.kr/home"
+    period: "2025.01 ~ Present"
+  - title: "KAIST-MIT Quantum Winter School"
+    org: "KAIST"
+    period: "2026.01"
+  - title: "GDGoC Committee"
+    org: "GDGoC CAU"
+    url: "https://gdgoc-cau.com/"
+    period: "2025.06 ~ Present"
+  - title: "Cecom Committee"
+    org: "CECOM (Hardware-System Club)"
+    url: "https://cecom.dev/"
+    period: "2025.01 ~ 2026.01"
+
+awards:
+  - name: "Grand Prize"
+    tier: "Grand Prize"
+    organizer: "TBD"
+    date: ""
+  - name: "First Prize"
+    tier: "First Prize"
+    organizer: "TBD"
+    date: ""
+  - name: "Gold Prize"
+    tier: "Gold Prize"
+    organizer: "TBD"
+    date: ""
+  - name: "Dean's Award"
+    tier: "Dean's Award (Software Engineering)"
+    organizer: "Chung-Ang University"
+    date: ""
+  - name: "Dean's Award"
+    tier: "Dean's Award (College of Creative ICT Engineering)"
+    organizer: "Chung-Ang University"
+    date: ""
+  - name: "Recipient of the Korea Women Venture"
+    tier: "Recipient of the Korea Women Venture"
+    organizer: "TBD"
+    date: ""
+
+projects:
+  - name: "DOCENT"
+    type: "팀 프로젝트 / iOS 개발"
+    period: "2025 ~ Present"
+    description: "PDF Learning Tool - Supports figure linking through OCR and layout analysis, even for documents without metadata. Implemented server synchronization and PDF viewer features."
+    tech: ["Swift", "SwiftUI", "PDFKit"]
+  - name: "욕창 예방 시스템"
+    type: "팀 프로젝트 / 시스템 개발"
+    period: "2024 ~ 2025"
+    description: "IoT-Based Posture Inference and Pressure Ulcer Prevention System. Fabricated custom pressure sensors using Velostat, implemented KNN-based posture inference on Raspberry Pi, real-time data collection and server transmission. Patent application completed."
+    tech: ["Python", "Raspberry Pi", "KNN", "HTTP", "Velostat Sensor"]
+  - name: "과제 (iOS App)"
+    type: "개인 프로젝트 / iOS 개발"
+    period: "2021 ~ 2023"
+    description: "Student Assignment Management Application. Developed and published SwiftUI-based iOS app on App Store. Achieved 1,730+ downloads. Implemented assignment scheduling and notification features."
+    tech: ["Swift", "SwiftUI"]
+  - name: "Whisper STT TUI"
+    type: "개인 프로젝트"
+    period: "2025"
+    description: "On-Device Speech Recognition TUI Program. Developed Whisper model-based Speech-to-Text TUI application in C++. Implemented real-time speech recognition through on-device inference."
+    tech: ["C++", "Whisper"]
+
+courses:
+  - name: "Computer Systems and Assembly Languages (컴퓨터 시스템 및 어셈블리언어)"
+    grade: "A+"
+  - name: "Data Structure (자료구조)"
+    grade: "A+"
+  - name: "Computer Architecture (컴퓨터통신)"
+    grade: "A+"
+  - name: "Principles of Programming Languages (프로그래밍언어론)"
+    grade: "A+"
+  - name: "Algorithm (알고리즘)"
+    grade: "A+"
+  - name: "Operating System (운영체제)"
+    grade: "A+"
+  - name: "Compiler (컴파일러)"
+    grade: "A+"
+  - name: "Artificial Intelligence (인공지능)"
+    grade: "A+"
+  - name: "Linux System and Its Applications (리눅스 시스템 응용 설계)"
+    grade: "A+"

@@ -1,0 +1,32 @@
+---
+layout: default
+title: Posts
+permalink: /posts/
+---
+
+{% assign pinned_posts = site.posts | where_exp: "post", "post.pinned == true" %}
+{% if pinned_posts.size > 0 %}
+<section class="section category-section">
+  <h2 class="section-title">Pinned</h2>
+  <div class="card-grid">
+    {% for post in pinned_posts %}
+      {% include card.html post=post %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% assign grouped = site.posts | group_by_exp: "post", "post.categories | first" %}
+{% for cat in site.category_order %}
+  {% assign group = grouped | where_exp: "g", "g.name == cat" | first %}
+  {% if group %}
+  <section class="section category-section">
+    <h2 class="section-title">{{ group.name }}</h2>
+    <div class="card-grid">
+      {% for post in group.items %}
+        {% include card.html post=post %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+{% endfor %}

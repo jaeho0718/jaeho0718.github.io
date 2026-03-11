@@ -1,0 +1,32 @@
+title: "Jaeho's Dev Blog"
+description: "시스템 소프트웨어, 양자컴퓨팅, 프레임워크 정리 블로그"
+url: "https://jaeho0718.github.io"
+baseurl: ""
+lang: "ko"
+markdown: kramdown
+kramdown:
+  auto_ids: true
+  toc_levels: "2..3"
+highlighter: rouge
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+permalink: /:categories/:title/
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      pinned: false
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+category_order:
+  - Framework
+  - CS Theory
+  - Project
+  - TIL
