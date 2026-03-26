@@ -7,6 +7,7 @@ markdown: kramdown
 kramdown:
   auto_ids: true
   toc_levels: "2..3"
+  math_engine: null
 highlighter: rouge
 plugins:
   - jekyll-seo-tag
