@@ -4,3 +4,12 @@
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 {% seo %}
 {% feed_meta %}
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
