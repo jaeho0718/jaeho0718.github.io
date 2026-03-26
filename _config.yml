@@ -26,7 +26,7 @@ defaults:
     values:
       layout: "page"
 category_order:
-  - Framework
+  - Quantum Information Theory
   - CS Theory
   - Project
   - TIL
