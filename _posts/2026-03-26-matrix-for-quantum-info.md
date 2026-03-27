@@ -130,6 +130,8 @@ $$
 
 고유값을 찾는 방법에 대해 다시 복기해보자. 고유값이 존재하기 위해서는 $(A-\lambda I )\vert v \rangle = 0$을 만족하는 $\vert v \rangle$가 존재해야하며 이는 $(A-\lambda I)$의 역행렬이 존재하면 안됨을 말한다. 즉 $det(A-\lambda I)=0$인 $\lambda$를 구하면 고유값을 찾을 수 있다.
 
+하나의 고유값 $\lambda$에 대하여 선형 독립인 고유벡터가 여러개 존재할 경우 축퇴(Degenerate)되었다고 얘기한다. 축퇴가 도리 경우 기저 선택의 자유도가 달라지는데 하나의 고유값에 대한 여러개의 선형독립 고유벡터가 생성한 고유공간내에서 기저선택이 가능하기 떄문이다. *(고유공간내 어떠한 벡터들도 고유벡터가 된다.)* 반면 비축퇴(Non degenerate)의 경우 하나의 고유값에 대해 하나의 고유벡터만 있기 때문에 측정값 하나당 기저가 하나씩 선택된다.
+
 ## 6. 에르미트 켤레와 에르미트 연산자 (Hermitian conjugate and Hermition operator)
 힐베르트 공간 $V$에서 임의의 선형연산자 $A$에 대하여 $(\vert v \rangle,A\vert w \rangle)=(A^\dagger \vert v \rangle, \vert w \rangle)$을 만족하는 유일한 선형 연산자 $A^\dagger$가 존재하며 이를 $A$연산자의 **에르미트 켤레(Hermitian conjugate)** 라 부른다. 이때 $A^\dagger = (A^T)^*$이다.
 
