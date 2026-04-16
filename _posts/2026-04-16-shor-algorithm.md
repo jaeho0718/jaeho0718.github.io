@@ -60,13 +60,13 @@ $$
 
 이러한 함수의 주기성을 포착하기 위해 푸리에 변환을 적용하면 주기에 해당하는 지점에서 강한 피크(Peak)가 발생하는데, 이것이 바로 쇼어 알고리즘이 난제를 해결하는 핵심 원리다.
 
-<p align="center"><img src="/assets/posts/2026-04-16-shor/fourier_result.png" width="300"></p>
+<p align="center"><img src="/assets/posts/2026-04-16-shor/fourier_result.png" width="400"></p>
 
 *($N=877, a=33$일 때, $g(x)=e^{2\pi i f(x)/r}$의 허수부(좌)와 $g(x)$의 푸리에 변환 결과의 실수부(우))*
 
 고전 컴퓨터에서는 거대한 $r$ 값을 찾기 위해 함숫값을 일일이 계산해야 하므로 지수적인 시간이 소요되어 효율적인 처리가 불가능하지만, 양자 컴퓨터는 양자 중첩과 양자 푸리에 변환(QFT)을 결합하여 이 과정을 비약적으로 단축한다. 구체적인 위수 찾기 양자 회로의 동작 단계는 아래와 같다.
 
-<p align="center"><img src="/assets/posts/2026-04-16-shor/simple_shor_circuit.png" width="300"></p>
+<p align="center"><img src="/assets/posts/2026-04-16-shor/simple_shor_circuit.png" width="400"></p>
 
 1. **레지스터 준비:** 각각 $m, n$개의 큐비트로 구성된 두 개의 레지스터를 준비한다.
 2. **중첩 상태 생성:** 첫 번째 레지스터에 하다마드(Hadamard) 게이트를 적용하여 중첩상태를 만든다. 이는 함수에 대입할 값 $|0\rangle, \dots, |2^m-1\rangle$들을 만드는 과정이다.
